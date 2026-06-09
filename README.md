@@ -1,212 +1,299 @@
-# Strata Cognitive Engine
+Strata Cognitive Kernel v1.0
 
-A local-first experimental distributed cognitive substrate for symbolic, probabilistic, and adaptive machine reasoning.
+A deterministic, event-sourced cognitive execution kernel for structured, verifiable computation.
 
-Released under the GNU AGPL v3.0 license.
+⸻
 
----
+Overview
 
-## Overview
+Strata Cognitive Kernel is a deterministic computation substrate designed to model structured cognition through explicit events, layered transformation pipelines, and fully replayable execution history.
 
-Strata Cognitive Engine is a research-oriented system exploring how cognition might emerge from structured interactions between:
+It is not an agent system, not a learning model, and not an LLM runtime.
 
-- a shared symbolic state graph
-- transient cognitive operators
-- probabilistic reasoning processes
-- memory evolution mechanisms
-- and strict governance constraints
+Instead, it provides a verifiable execution foundation on which higher-level systems (agents, interfaces, reasoning layers) can be safely built.
 
-Rather than relying on autonomous “agents” or conversational AI loops, Strata models cognition as a **dynamic system of structured transformations over a persistent cognitive substrate**.
+Every computation in Strata is:
 
-The goal is not to build a chatbot or assistant.
+* event-driven
+* fully deterministic
+* replayable
+* traceable across all layers
 
-The goal is to explore a **cognitive architecture**.
+⸻
 
----
+Core Design Principles
 
-## Core Idea
+1. Determinism First
 
-Traditional AI systems tend to center around:
-- stateless prompts
-- conversational agents
-- isolated model calls
+Given identical inputs and event history, Strata always produces identical outputs.
 
-Strata instead treats intelligence as:
+There is:
 
-> a continuously evolving graph of structured beliefs, goals, constraints, and transformations.
+* no randomness
+* no time-dependent logic in execution paths
+* no hidden state mutation
+* no probabilistic decision-making
 
-Cognitive activity emerges from interactions between:
-- symbolic structure
-- probabilistic inference
-- event-driven updates
-- and bounded processing units
+⸻
 
----
+2. Event-Sourced Architecture
 
-## Design Principles
+All system state is derived from an append-only event log.
 
-### 1. Substrate over Agents
-Cognition is not simulated through independent agents.
-It emerges from transformations of a shared state space.
+* State is never mutated directly
+* All changes are expressed as events
+* Entire system state can be reconstructed via replay
 
-### 2. Ephemeral Cognition
-Processing units are temporary and scoped.
-No persistent “AI personalities” are required.
+⸻
 
-### 3. Structural Safety
-Safety is enforced through architecture:
-- capability boundaries
-- execution isolation
-- invariant constraints
-- governance layers
+3. Layer Isolation
 
-Not prompt-level alignment.
+The system is strictly divided into independent layers:
 
-### 4. Observability First
-Every cognitive transformation must be traceable, inspectable, and replayable.
+* Kernel (event system)
+* Ontology (entities + relationships)
+* Semantic layer (intent interpretation)
+* Goal system (predicate evaluation)
+* Executive layer (goal coordination)
+* Policy layer (intent scoring)
+* Execution layer (command mapping)
+* Trace system (immutable execution record)
+* Coherence system (integrity verification)
+* Memory system (aggregated state influence)
+* ABI registry (contract system)
+* Capability registry (system surface definition)
+* CLI interface (external interaction)
 
-Hidden reasoning is treated as a failure mode.
+Each layer communicates only through defined structures.
 
-### 5. Deterministic Core + Probabilistic Periphery
-Core system behavior is deterministic and auditable.
-Cognitive exploration layers may be probabilistic and adaptive.
+⸻
 
----
+4. Verifiability & Replayability
 
-## Architecture Overview
+Every execution is:
 
-### Cognitive Substrate
-A persistent structured graph containing:
-- entities and concepts
-- goals and constraints
-- causal relationships
-- uncertainty weights
-- temporal state
-- memory traces
+* fully traceable
+* fully replayable
+* invariant-checked
+* structurally auditable
 
----
+Strata can reconstruct system state entirely from event history.
 
-### Cognitive Operators
-Ephemeral processing units responsible for:
-- abstraction
-- planning
-- contradiction detection
-- causal inference
-- compression
-- symbolic transformation
+⸻
 
-Operators are:
-- resource-bounded
-- capability-scoped
-- fully observable
-- non-persistent
+Architecture Overview
 
----
+Strata executes all inputs through a deterministic multi-stage pipeline:
 
-### Event System
-A structured event-driven backbone supporting:
-- asynchronous cognition
-- deterministic replay
-- prioritized scheduling
-- traceable state transitions
+Input
+  ↓
+Semantic Interpretation
+  ↓
+Event Translation
+  ↓
+Goal Evaluation
+  ↓
+Executive Coordination
+  ↓
+Policy Scoring & Ranking 
+  ↓
+Execution Adapter
+  ↓
+Trace Recording
+  ↓
+Coherence Verification
+  ↓
+Memory Update
+  ↓
+Kernel State Projection
 
----
+This pipeline is:
 
-### Memory Ecology
-Memory is treated as a dynamic system, not static storage.
+* strictly ordered
+* non-skippable
+* deterministic
+* fully traceable
 
-Includes:
-- episodic memory
-- semantic memory
-- procedural memory
-- predictive memory
-- salience weighting
-- decay and compression
-- contradiction-aware storage
+⸻
 
----
+Key Features
 
-### Governance Layer
-Ensures system stability through:
-- recursion limits
-- entropy monitoring
-- contradiction detection hooks
-- resource accounting
-- graph integrity validation
-- quarantine mechanisms
+Deterministic Execution Kernel
 
----
+All operations are deterministic and reproducible.
 
-### Execution Boundary
-Strict separation between cognition and action:
+Event-Sourced State Model
 
-- cognitive layer proposes transformations
-- execution layer performs external actions
-- all execution is permission-gated and auditable
+System state is derived entirely from immutable event history.
 
----
+Goal System (Predicate-Based)
 
-## Safety Philosophy
+Goals are evaluated using structured predicates over kernel state.
 
-Strata assumes that advanced adaptive systems require structural constraints to remain stable.
+Executive Coordination Layer
 
-Core safeguards include:
-- scoped capabilities
-- immutable governance rules
-- deterministic execution boundaries
-- bounded recursion
-- isolation between cognition and action
-- full audit logging
+Deterministically selects and prioritizes goals using policy + memory weighting.
 
-The system explicitly avoids:
-- unrestricted autonomy
-- uncontrolled self-modification
-- hidden execution paths
-- persistent self-preservation behavior
+Policy Scoring System
 
----
+Intents are scored using:
 
-## Current Status
+* semantic alignment
+* ontology matching
+* rule alignment
+* memory influence
+* historical weighting
 
-This project is in early-stage research and architecture development.
+Memory System
 
-Current focus:
-- cognitive substrate design
-- event system implementation
-- governance scaffolding
-- memory structure modeling
-- observability tooling
+Aggregates execution history and influences future policy scoring (without altering kernel logic).
 
-Intelligence and autonomy are intentionally secondary to system correctness and stability.
+Trace System
 
----
+Every execution produces a complete immutable trace across all pipeline stages.
 
-## License
+Coherence Verification
 
-Strata Cognitive Engine is released under the GNU Affero General Public License v3.0 (AGPL-3.0).
+System integrity is validated across execution, policy, memory, and kernel consistency checks.
 
-See LICENSE file for details.
+ABI Contract System
 
----
+Versioned, frozen schema contracts ensuring structural consistency.
 
-## Research Directions
+Capability Registry
 
-This project explores:
+Declarative definition of all system capabilities (immutable post-init).
 
-- distributed cognitive systems
-- symbolic + probabilistic hybrid reasoning
-- adaptive graph-based intelligence
-- memory thermodynamics
-- emergent constraint systems
-- meta-cognitive governance structures
-- bounded emergent computation
+CLI Interface
 
----
+Provides deterministic interaction with the kernel:
 
-## Disclaimer
+* run
+* replay
+* inspect
+* verify
+* goals
+* memory
 
-This system is experimental and not intended for production use in safety-critical or unsupervised environments.
+⸻
 
-All external interactions must remain strictly permission-gated and auditable.
+Determinism Guarantees
 
----
+Strata guarantees:
+
+* identical output for identical inputs + event history
+* deterministic ordering via BTreeMap/BTreeSet
+* stable floating-point comparisons via bitwise equality
+* full replay consistency across executions
+* no hidden or implicit state changes
+
+⸻
+
+Build & Execution Model
+
+Strata is designed for reproducible execution environments.
+
+Release Build
+
+`scripts/build-release.sh`
+
+* isolated temporary build directory
+* fully cleaned after execution
+* produces minimal binary (~718 KB)
+* no persistent target/ artifacts
+
+⸻
+
+Test Execution
+
+`scripts/test-release.sh`
+
+* isolated execution environment
+* no persistent artifacts
+* deterministic test behavior
+* full cleanup on exit
+
+⸻
+
+System Guarantees
+
+Kernel Integrity
+
+* event-sourced architecture preserved
+* no direct state mutation outside kernel rules
+* strict replay consistency
+
+ABI Stability
+
+* frozen after initialization
+* versioned contracts
+* deterministic serialization
+
+Capability Safety
+
+* immutable capability registry
+* explicit system surface definition
+
+Observability Safety
+
+* logging does not affect execution
+* log levels are externally controlled
+* no semantic impact from debug output
+
+⸻
+
+What Strata Is
+
+Strata is:
+
+* a deterministic cognition execution kernel
+* a structured event-sourced computation system
+* a verifiable state machine for layered decision pipelines
+* a reproducible computation substrate
+
+⸻
+
+What Strata Is NOT
+
+Strata is NOT:
+
+* an autonomous agent
+* a learning system
+* a probabilistic AI system
+* an LLM runtime
+* a self-directed intelligence system
+
+Any such systems must be built externally above this kernel layer.
+
+⸻
+
+System Status
+
+Strata Cognitive Kernel v1.0 — STABLE RELEASE
+
+The system is:
+
+* fully deterministic
+* fully replayable
+* structurally verified
+* layer-isolated
+* ABI-frozen
+* capability-defined
+* test-stable (700+ tests passing)
+* production-packaged
+
+⸻
+
+Version
+
+v1.0-strata-kernel
+
+License / Usage
+
+GNU AFFERO GENERAL PUBLIC LICENSE 3.0
+
+Final Note
+
+Strata is intentionally designed as a kernel, not a product.
+
+It provides the lowest reliable layer on which structured cognitive systems can be built without losing determinism or traceability.
